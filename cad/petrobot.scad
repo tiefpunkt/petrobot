@@ -1,6 +1,11 @@
-width_inside=60;
-height_inside=60;
-length_inside=90;
+//width_inside=60;
+//height_inside=60;
+//length_inside=90;
+
+width_inside=70;
+height_inside=70;
+length_inside=110;
+
 
 material=3;
 
@@ -49,9 +54,9 @@ difference() {
         }
         
         translate([width_inside/2,height_inside*1/3]) {
-            translate([-4,-5]) hull() {
+            translate([-6,-5]) hull() {
                 circle(r=1.5);
-                translate([17,6]) circle(r=1.5);
+                translate([24,9]) circle(r=1.5);
             }
         }
     }
@@ -95,19 +100,19 @@ difference() {
         translate([3,-2.75]) square([2.5,5.5]);
     }
     
-    translate([material+4, 0]) rotate(90){
+    translate([material+3, 0]) rotate(90){
         translate([-1,-1.5]) square([9,3]);
         translate([3,-2.75]) square([2.5,5.5]);
     }
-    translate([length-material-4, 0]) rotate(90){
+    translate([length-material-3, 0]) rotate(90){
         translate([-1,-1.5]) square([9,3]);
         translate([3,-2.75]) square([2.5,5.5]);
     }
-    translate([material+4, height_inside]) rotate(270){
+    translate([material+3, height_inside]) rotate(270){
         translate([-1,-1.5]) square([9,3]);
         translate([3,-2.75]) square([2.5,5.5]);
     }
-    translate([length-material-4, height_inside]) rotate(270){
+    translate([length-material-3, height_inside]) rotate(270){
         translate([-1,-1.5]) square([9,3]);
         translate([3,-2.75]) square([2.5,5.5]);
     }
@@ -140,10 +145,10 @@ module topbottom() {
         translate([material+length_inside*3/6-tab/2,width_inside+material]) square([tab,material+1]);
         translate([material+length_inside*5/6-tab/2,width_inside+material]) square([tab,material+1]);
         
-        translate([material+4, material/2]) screw_hole(270);
-        translate([length-material-4, material/2]) screw_hole(270);
-        translate([material+4, width-material/2]) screw_hole(90);
-        translate([length-material-4, width-material/2]) screw_hole(90);
+        translate([material+3, material/2]) screw_hole(270);
+        translate([length-material-3, material/2]) screw_hole(270);
+        translate([material+3, width-material/2]) screw_hole(90);
+        translate([length-material-3, width-material/2]) screw_hole(90);
     }
 }
 
@@ -157,20 +162,20 @@ translate([width+length+4,0])
  translate([width+length*2+6,0])
     difference() { 
         topbottom();
-        translate([length-material-22-8,material + width_inside/2-53.3/2+2.5]) hull() {
+        translate([length-material-22-8+2,material + width_inside/2-53.3/2+2.5]) hull() {
+            circle(r=1.5);
+            translate([-44,0]) circle(r=1.5);
+        }
+        translate([length-material-22-8-4+2,material + width_inside/2+53.3/2-2.5]) hull() {
             circle(r=1.5);
             translate([-40,0]) circle(r=1.5);
-        }
-        translate([length-material-22-8-4,material + width_inside/2+53.3/2-2.5]) hull() {
-            circle(r=1.5);
-            translate([-36,0]) circle(r=1.5);
         }
         translate([length-material-22+10.5,material + width_inside/2+53.3/2-3]) hull() {
             circle(r=2);
             translate([0,-4]) circle(r=2);
         }
         
-        #translate([0,material+15]) hull() {
+        translate([0,material+15]) hull() {
             circle(r=3);
             translate([8,0]) circle(r=3);
         }
@@ -180,7 +185,7 @@ translate([0,height+2])
     difference() {
         frontback();
         translate([width/2-53.3/2+8,height-material-30+4]) square([14,13]);
-        translate([width/2+53.3/2-3-9,height-material-30+4]) square([9,13]);
+        translate([width/2+53.3/2-3-11,height-material-30+4]) square([9,12]);
         translate([width/2+53.3/2-1-8,height-material-30+4+15]) square([8,7]);
     }
     
