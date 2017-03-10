@@ -2,9 +2,9 @@
 //height_inside=60;
 //length_inside=90;
 
-width_inside=70;
-height_inside=70;
-length_inside=110;
+width_inside=67;
+height_inside=67;
+length_inside=105;
 
 
 material=3;
@@ -17,7 +17,7 @@ tab = 12;
 $fn=100;
 module screw_hole(a) {
     rotate(a) hull() {
-        circle(r=1.5);
+        translate([-0.5,0]) circle(r=1.5);
         translate([2,0]) circle(r=1.5);
     }
 }
@@ -49,14 +49,27 @@ difference() {
     frontback();
     translate([material,material]) {
         translate([width_inside/2,height_inside*2/3]) {
-            translate([-26/2,0]) circle(r=8);
-            translate([26/2,0]) circle(r=8);
+            translate([-26/2,0]) circle(r=8.1);
+            translate([26/2,0]) circle(r=8.1);
         }
         
         translate([width_inside/2,height_inside*1/3]) {
             translate([-6,-5]) hull() {
                 circle(r=1.5);
                 translate([24,9]) circle(r=1.5);
+            }
+        }
+        
+        translate([width_inside/2,height_inside*2/3]) {
+            translate([3,8]) hull() {
+                circle(r=0.8);
+                translate([8,5]) circle(r=0.8);
+            }
+        }
+        translate([width_inside/2,height_inside*2/3]) {
+            mirror([1,0]) translate([3,8]) hull() {
+                circle(r=0.8);
+                translate([8,5]) circle(r=0.8);
             }
         }
     }
@@ -118,15 +131,23 @@ difference() {
     }
     
     // Motor mount
+    /*
     translate([material+5+7.5+7.5/2,11.2]) circle(r=7.5/2);
     translate([material+5+20.5+4/2,11.2]) circle(r=4/2);
     translate([material+5+41,11.2-5/2]) square([3,5]);
     translate([material+5+30.2+3/2,11.2-10.1+1.5]) circle(r=3/2);
-    translate([material+5+30.2  +3/2,11.2+10.1-1.5]) circle(r=3/2);
+    translate([material+5+30.2+3/2,11.2+10.1-1.5]) circle(r=3/2);
+    */
+    translate([material+6.5+7.5+7.5/2,11.2]) circle(r=7.5/2);
+    translate([material+6.5+11.25,11.2-11.25+20.5+4/2]) circle(r=4/2);
+    translate([material+6.5+11.25-5/2,11.2-11.25+41]) square([5,3]);
+    translate([material+6.5+11.25-10.1+1.5,11.2-11.25+30.2+3/2]) circle(r=3/2);
+    translate([material+6.5+11.25+10.1-1.5,11.2-11.25+30.2+3/2]) circle(r=3/2);
     
     // arduino
-    translate([length-material-15-tab,height_inside-30-material]) square([tab,material]);
+    /*translate([length-material-15-tab,height_inside-30-material]) square([tab,material]);
     translate([length-material-40-2*tab,height_inside-30-material]) square([tab,material]);
+    */
 }
 
 module topbottom() {
@@ -155,6 +176,9 @@ module topbottom() {
 translate([width+length+4,0])
     difference() { 
         topbottom();
+        
+        translate([material+6.5+11.25-5.5/2,material+8]) square([5.5,4]);
+        translate([material+6.5+11.25-5.5/2,material+width_inside-8-4]) square([5.5,4]);
         translate([material+length_inside-20,width/2-39/2]) circle(r=1.5);
         translate([material+length_inside-20,width/2+39/2]) circle(r=1.5);
     }
@@ -162,6 +186,8 @@ translate([width+length+4,0])
  translate([width+length*2+6,0])
     difference() { 
         topbottom();
+        
+        // pin slots
         translate([length-material-22-8+2,material + width_inside/2-53.3/2+2.5]) hull() {
             circle(r=1.5);
             translate([-44,0]) circle(r=1.5);
@@ -170,12 +196,21 @@ translate([width+length+4,0])
             circle(r=1.5);
             translate([-40,0]) circle(r=1.5);
         }
+        
+        // screw holes for shield mount
+        translate([length-material-22,material + width_inside/2-53.3/2+2.5]) circle(r=1.5);
+        translate([length-material-22+1.3,material + width_inside/2+53.3/2-2.5]) circle(r=1.5);
+        translate([length-material-22-50.8,material + width_inside/2-53.3/2+2.5+15.2]) circle(r=1.5);
+        translate([length-material-22-50.8,material + width_inside/2-53.3/2+2.5+15.2+27.9]) circle(r=1.5);
+        
+        
+        // hole for screw power terminals
         translate([length-material-22+10.5,material + width_inside/2+53.3/2-3]) hull() {
             circle(r=2);
             translate([0,-4]) circle(r=2);
         }
         
-        translate([0,material+15]) hull() {
+        translate([0,material+17.5]) hull() {
             circle(r=3);
             translate([8,0]) circle(r=3);
         }
@@ -187,20 +222,6 @@ translate([0,height+2])
         translate([width/2-53.3/2+8,height-material-30+4]) square([14,13]);
         translate([width/2+53.3/2-3-11,height-material-30+4]) square([9,12]);
         translate([width/2+53.3/2-1-8,height-material-30+4+15]) square([8,7]);
-    }
-    
-translate([width+2,height+2]) 
-    translate([0,material]) difference() {
-        union() {
-            square([70,width_inside]);
-            translate([70-tab-8,-material]) square([tab,material+1]);
-            translate([70-2*tab-8-25,-material]) square([tab,material+1]);
-            translate([70-tab-8,width_inside-1]) square([tab,material+1]);
-            translate([70-2*tab-8-25,width_inside-1 ]) square([tab,material+1]);
-        }
         
-        translate([70-15,width_inside/2-53.3/2+2.5]) circle(r=1.5);
-        translate([70-15+1.3,width_inside/2+53.3/2-2.5]) circle(r=1.5);
-        translate([70-15-50.8,width_inside/2-53.3/2+2.5+15.2]) circle(r=1.5);
-        translate([70-15-50.8,width_inside/2-53.3/2+2.5+15.2+27.9]) circle(r=1.5);
+        translate([material+width_inside-5,material+32]) circle(r=5.8/2);
     }
