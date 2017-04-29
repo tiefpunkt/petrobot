@@ -22,10 +22,12 @@ The PopPet robot was a kickstarter in 2014. It was successful, and the designs w
   * The Adafruit v1 Motor Shield is not produced by Adafruit anymore, but there are clones of it available from China. They are much cheaper than any other motor shield available, but work well enough for our purpose.
   * [Documentation](https://learn.adafruit.com/adafruit-motor-shield/overview)
   * [Schematic](https://raw.githubusercontent.com/adafruit/Adafruit-Motor-Shield-for-Arduino/master/mshieldv12schem.png)
+  * [More information on the shield](http://playground.arduino.cc/Main/AdafruitMotorShield)
 ## Firmware
 ### Libraries
 * [Adafruit Motor Shield](https://github.com/adafruit/Adafruit-Motor-Shield-library)
   * [Relevent documentation part for controlling DC motors](https://learn.adafruit.com/adafruit-motor-shield/af-dcmotor-class)
+* [NewPing](https://bitbucket.org/teckel12/arduino-new-ping/downloads/)
 
 ## Notes
 * Font for the wheels: [Phat Phreddy](http://www.dafont.com/de/phatt-phreddy.font?text=WOOD+YEAR)
