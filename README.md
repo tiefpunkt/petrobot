@@ -2,7 +2,7 @@
 
 A tiny Arduino-compatible robot platform. Inspired by the Pop Pet Robot.
 
-![Picture of the bot](img/robot.jpg)
+![Picture of the bot](docs/img/robot.jpg)
 
 ## PopPet Robot
 The PopPet robot was a kickstarter in 2014. It was successful, and the designs were open sourced. And then it sort of died. The website is down, the Facebook page gone, and the twitter account has gone pretty much silent.

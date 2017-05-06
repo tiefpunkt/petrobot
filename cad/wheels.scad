@@ -8,7 +8,7 @@ module curved_text(string, r, size, font, angle) {
 
 difference() {
     circle(r=60/2+1);
-    circle(r=1.3);
+    circle(r=1.15);
     translate([8,0]) circle(r=1.5);
     rotate(120) translate([8,0]) circle(r=1.5);
     rotate(240) translate([8,0]) circle(r=1.5);
@@ -39,12 +39,13 @@ translate([70,0]) difference() {
 
 translate([35,53]) difference() {
     circle(r=60/2);
-    difference() {
+    /*difference() {
         circle(r=5.3/2);
         translate([3.6/2,-5]) square([10,10]);
         translate([-10-3.6/2,-5]) square([10,10]);
         
-    }
+    }*/
+    circle(r=1.15);
     translate([8,0]) circle(r=1.5);
     rotate(120) translate([8,0]) circle(r=1.5);
     rotate(240) translate([8,0]) circle(r=1.5);
