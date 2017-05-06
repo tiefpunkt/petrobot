@@ -13,10 +13,10 @@ NewPing sonar(TRIGGER_PIN, ECHO_PIN, 100); // NewPing setup of pins and maximum 
 #define STOP_DISTANCE 15
 
 
-#define SPEED_MIN    100
+#define SPEED_MIN    40
 #define SPEED_STEPS  20
-#define SPEED_FINAL 240
-#define SPEED_TURNING 180
+#define SPEED_FINAL 160
+#define SPEED_TURNING 100
 int speed = 0;
 int distance, d1;
 
