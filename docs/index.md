@@ -33,3 +33,22 @@ The PopPet robot was a kickstarter in 2014. It was successful, and the designs w
 
 ## Notes
 * Font for the wheels: [Phat Phreddy](http://www.dafont.com/de/phatt-phreddy.font?text=WOOD+YEAR)
+
+## Mailing List
+We finally have a mailing list. Stay updated about all that happens here at PetRobot HQ.
+
+<!-- Begin MailChimp Signup Form -->
+
+<div id="mc_embed_signup">
+<form action="//munichmakerlab.us15.list-manage.com/subscribe/post?u=0e83a25edeba666136a8a268a&amp;id=0e4aeba960" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe right here</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required> <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0e83a25edeba666136a8a268a_0e4aeba960" tabindex="-1" value=""></div>
+    <div class="clear"></div>
+    </div>
+</form>
+</div>
+
+<!-- End MailChimp Signup Form -->
