@@ -1,4 +1,4 @@
-[Home]({{ site.baseurl }}{% link index.md %}) | [Building]({{ site.baseurl }}{% link build.md %})
+[Home]({{ site.baseurl }}{% link index.md %}) | [Building]({{ site.baseurl }}{% link build.md %}) | [Programming]({{ site.baseurl }}{% link program.md %})
 
 
 # Pet Robot
@@ -28,8 +28,9 @@ The PopPet robot was a kickstarter in 2014. It was successful, and the designs w
 
 ## Firmware
 ### Libraries
-* [Adafruit Motor Shield](https://github.com/adafruit/Adafruit-Motor-Shield-library)
+* [Adafruit Motor Shield](https://github.com/tiefpunkt/Adafruit-Motor-Shield-library/releases/tag/1.0.1)
   * [Relevent documentation part for controlling DC motors](https://learn.adafruit.com/adafruit-motor-shield/af-dcmotor-class)
+* [NewPing](https://bitbucket.org/teckel12/arduino-new-ping/downloads/)
 
 ## Notes
 * Font for the wheels: [Phat Phreddy](http://www.dafont.com/de/phatt-phreddy.font?text=WOOD+YEAR)

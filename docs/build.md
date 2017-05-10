@@ -1,3 +1,5 @@
+[Home]({{ site.baseurl }}{% link index.md %}) | [Building]({{ site.baseurl }}{% link build.md %}) | [Programming]({{ site.baseurl }}{% link program.md %})
+
 # Building your robot
 
 ## 1. Parts

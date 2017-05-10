@@ -25,7 +25,7 @@ The PopPet robot was a kickstarter in 2014. It was successful, and the designs w
   * [More information on the shield](http://playground.arduino.cc/Main/AdafruitMotorShield)
 ## Firmware
 ### Libraries
-* [Adafruit Motor Shield](https://github.com/adafruit/Adafruit-Motor-Shield-library)
+* [Adafruit Motor Shield](https://github.com/tiefpunkt/Adafruit-Motor-Shield-library/releases/tag/1.0.1)
   * [Relevent documentation part for controlling DC motors](https://learn.adafruit.com/adafruit-motor-shield/af-dcmotor-class)
 * [NewPing](https://bitbucket.org/teckel12/arduino-new-ping/downloads/)
 
