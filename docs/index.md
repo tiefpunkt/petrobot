@@ -1,4 +1,4 @@
-[Home]({{ site.baseurl }}{% link index.md %}) | [Building]({{ site.baseurl }}{% link build.md %}) | [Programming]({{ site.baseurl }}{% link program.md %})
+[Home]({{ site.baseurl }}{% link index.md %}) | [Building]({{ site.baseurl }}{% link build.md %}) | [Programming]({{ site.baseurl }}{% link program.md %}) | [Extensions]({{ site.baseurl }}{% link extensions.md %})
 
 
 # Pet Robot
