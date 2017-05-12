@@ -35,8 +35,8 @@ The PopPet robot was a kickstarter in 2014. It was successful, and the designs w
 ## Notes
 * Font for the wheels: [Phat Phreddy](http://www.dafont.com/de/phatt-phreddy.font?text=WOOD+YEAR)
 
-## Mailing List
-We finally have a mailing list. Stay updated about all that happens here at PetRobot HQ.
+## Newsletter
+We finally have a newsletter. Stay updated about all that happens here at PetRobot HQ.
 
 <!-- Begin MailChimp Signup Form -->
 
